@@ -1,1 +1,2 @@
-echo 'virtual' > .gitignore
+git init
+echo 'venv' > .gitignore
