@@ -1,2 +1,2 @@
 git init
-echo 'venv' > .gitignore
+echo 'virtual' > .gitignore
