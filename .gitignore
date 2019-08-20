@@ -1,1 +1,1 @@
-virtual/
+echo 'virtual' > .gitignore
