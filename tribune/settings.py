@@ -78,11 +78,15 @@ WSGI_APPLICATION = 'tribune.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tribune',
+        'USER': 'mannuh',
+        'PASSWORD':'123',
     }
 }
 
+#timezone settings
+TIME_ZONE = 'Africa/Nairobi'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
