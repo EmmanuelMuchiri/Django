@@ -30,6 +30,7 @@ class Article(models.Model):
     tags = models.ManyToManyField(tags)
     editor = models.ForeignKey(Editor,on_delete = models.DO_NOTHING)
     pub_date = models.DateTimeField(auto_now_add=True,blank =True)
+    article_image = models.ImageField(upload_to= 'articles/',default="article_image")
 
 
     @classmethod
