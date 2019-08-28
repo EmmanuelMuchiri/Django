@@ -25,7 +25,7 @@ def news_today(request):
 
                 HttpResponseRedirect('news_today')
     else:
-        form = NewsLetter()
+        form = NewsLetterForm()
 
     return render(request,'all-news/today-news.html',{"date": date,"news":news,"letterForm":form})
 
