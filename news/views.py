@@ -2,7 +2,7 @@ import datetime as dt
 from django.http import HttpResponse,Http404,HttpResponseRedirect
 from django.shortcuts import render,redirect
 from .models import Article,NewsLetterRecipients
-from .forms import NewsLetterForm
+from .forms import NewsLetterForm,NewArticleForm
 from .emails import send_welcome_email
 from django.contrib.auth.decorators import login_required
 from .forms import NewArticleForm, NewsLetterForm
@@ -81,9 +81,10 @@ def new_article(request):
             article = form.save(commit=False)
             article.editor = current_user
             article.save()
-        return redirect('NewsToday')
+        return redirect('newsToday')
 
     else:
         form = NewArticleForm()
     return render(request, 'new_article.html', {"form": form})
+
 
